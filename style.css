@@ -1,0 +1,744 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kanit", sans-serif;
+    scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgb(241, 243, 244);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgb(2, 186, 222);
+    border-radius: 20px;
+    border: 3px solid rgb(241, 243, 244);
+}
+
+.button-whatsapp {
+    position: fixed;
+    height: 50px;
+    right: 20px;
+    bottom: 40px;
+    transition: .5s;
+    z-index: 1;
+}
+
+.button-whatsapp:hover {
+    scale: 1.2;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: rgb(2, 186, 222);
+}
+
+header img {
+    width: 100px;
+}
+
+header h2, .images h2 {
+    color: white;
+    font-weight: 400;
+    font-style: italic;
+    text-shadow: 2px 2px 2px rgb(170, 150, 139);
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    height: 10vh;
+    background: rgb(2, 186, 222);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    font-size: 20px;
+    text-shadow: 2px 2px 2px gray;
+    border-bottom: 2px solid white;
+    box-shadow: 0px 5px 5px rgb(170, 150, 139);
+    letter-spacing: 1px;
+}
+
+ul a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+nav li,
+nav a,
+.nav li,
+.nav a {
+    transition: .5s;
+}
+
+nav li:hover,
+.nav li:hover {
+    scale: 1.1;
+}
+
+nav a:hover,
+.nav a:hover {
+    color: rgb(170, 150, 139);
+}
+
+main {
+    background: rgb(2, 186, 222);
+    color: white;
+}
+
+.form-images {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 20px;
+}
+
+.formulario-fale-conosco {
+    background-color: rgb(255, 255, 255, .5);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    width: 360px;
+    height: 360px;
+}
+
+input {
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 5px;
+    outline-color: rgb(2, 186, 222);
+}
+
+textarea {
+/*    width: 270px; */
+    height: 100px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 5px;
+    outline-color: rgb(2, 186, 222);
+}
+
+button {
+    color: white;
+    background-color: #C51111;
+    border-radius: 3px;
+    border: none;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 30px;
+    align-self: center;
+}
+
+button:hover {
+    color: white;
+    background-color: rgb(2, 186, 222);
+    transition: 0.5s ease-in-out;
+}
+
+.images {
+    background-color: rgb(255, 255, 255, .5);
+    padding: 20px;
+    border-radius: 5px;
+    width: 360px;
+    height: 360px;
+}
+
+.slider {
+    margin: 0 auto;
+    width: 320px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.slides {
+    width: 400%;
+    height: 360px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    position: relative;
+    transition: 1s;
+}
+
+.slide img {
+    width: 320px;
+    height: 260px;
+    border-radius: 5px;
+}
+
+.manual-navigation {
+    position: absolute;
+    width: 320px;
+    margin-top: -80px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid #FFF;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 20px;
+}
+
+.manual-btn:hover {
+    background-color: #FFF;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+
+#radio5:checked ~ .first{
+    margin-left: -100%;
+}
+
+#radio6:checked ~ .first{
+    margin-left: -125%;
+}
+
+#radio7:checked ~ .first{
+    margin-left: -150%;
+}
+
+#radio8:checked ~ .first{
+    margin-left: -175%;
+}
+
+.navigation-auto div {
+    border: 2px solid #20a6ff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto {
+    position: absolute;
+    width: 320px;
+    margin-top: 280px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 20px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background-color: #FFF;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background-color: #FFF;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background-color: #FFF;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+    background-color: #FFF;
+}
+
+#radio5:checked ~ .navigation-auto .auto-btn5 {
+    background-color: #FFF;
+}
+
+#radio6:checked ~ .navigation-auto .auto-btn6 {
+    background-color: #FFF;
+}
+
+#radio7:checked ~ .navigation-auto .auto-btn7 {
+    background-color: #FFF;
+}
+
+#radio8:checked ~ .navigation-auto .auto-btn8 {
+    background-color: #FFF;
+}
+
+.anuncio-info {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 3vw;
+}
+
+.anuncio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 3vw;
+}
+
+.anuncio p {
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.info {
+    width: 90vw;
+    padding-inline: 5vw;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    margin: 0 auto;
+}
+
+.mapa-pin-endereco,
+.pin-horario,
+.pin-contato,
+.contato p {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #F1F3F4;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 400px;
+    padding-block: 10px;
+    color: #222222;
+}
+
+.mapa-pin-endereco img,
+.pin-horario img,
+.pin-contato img {
+    height: 30px;
+}
+
+.mapa-pin-endereco p {
+    text-wrap: wrap;
+    text-align: center;
+    font-size: 13px;
+}
+
+iframe {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.pin-horario {
+    padding-block: 14px;
+}
+
+.horario h3,
+.pin-contato h3,
+.contato p {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    font-size: 26px;
+    text-align: center;
+}
+
+.semana {
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-inline: 20px;
+    padding-bottom: 14px;
+    gap: 10px;
+    background: #F1F3F4;
+    color: #222222;
+}
+
+.pin-contato {
+    border-radius: 0;
+}
+
+.contato p {
+    border-radius: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-block: 22.5px;
+}
+
+.servicos-comodidades {
+    height: 100vh;
+    background: rgb(2, 186, 222);
+    color: #F1F3F4;
+    display: flex;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.servicos-comodidades h2 {
+    font-size: 32px;
+    font-weight: 100;
+    text-align: center;
+}
+
+.servicos-comodidades ul {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.servicos-comodidades ul li {
+    margin-top: 5px;
+    transition: 1s;
+}
+
+.servicos-comodidades ul li:hover {
+    color: rgb(170, 150, 139);
+    scale: 1.2;
+}
+
+.servicos,
+.comodidades {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+}
+
+.comodidades {
+    justify-content: space-around;
+    margin-top: -20px;
+}
+
+.comodidades img {
+    height: 30px;
+}
+
+.wi-fi,
+.sala-espera,
+.espaco-kids,
+.banheiros {
+    display: flex;
+    gap: 20px;
+}
+
+.icons-comodidades {
+    display: flex;
+    flex-direction: column;
+}
+
+.sobre {
+    background: rgb(2, 186, 222);
+    color: #F1F3F4;
+}
+
+.sobre p {
+    width: 80vw;
+    margin: 0 auto;
+    text-align: justify;
+    font-size: 16px;
+}
+
+footer {
+    height: 100vh;
+    background: rgb(2, 186, 222);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer h2 {
+    width: 80vw;
+    font-size: 20px;
+    color: #F1F3F4;
+    align-self: center;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+footer img {
+    width: 40px;
+}
+
+.links,
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 400px;
+    margin-bottom: 50px;
+}
+
+.links {
+    align-items: flex-start;
+}
+
+.nav {
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.nav ul {
+    list-style: none;
+}
+
+.links a {
+    text-decoration: none;
+    color: #F1F3F4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.links-nav {
+    display: flex;
+}
+
+footer p {
+    color: #F1F3F4;
+    font-weight: 100;
+    text-align: center;
+    padding-inline: 2vw;
+}
+
+@media (orientation:portrait) {
+    .anuncio {
+        gap: 10px
+    }
+}
+
+@media (min-width: 1000px) and (orientation:portrait) {
+    .comodidades h2 {
+        margin-bottom: -16vh;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    header {
+        flex-direction: column;
+    }
+
+    .mapa-pin-endereco,
+    iframe,
+    .pin-horario,
+    .pin-contato,
+    .contato p,
+    .semana {
+        width: 35vw;
+    }
+
+    .horario h3,
+    .pin-contato h3,
+    .contato p {
+        font-size: 16px;
+    }
+
+    .mapa-pin-endereco p {
+        font-size: 10px;
+    }
+
+    .pin-horario {
+        padding-block: 10px;
+    }
+
+    .servicos-comodidades {
+        gap: 2vw;
+    }
+
+    .links,
+    .nav {
+        width: 35vw;
+    }
+
+    .comodidades {
+        margin: 0;
+        justify-content: space-evenly;
+    }
+
+    footer h2 {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-images {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .mapa-pin-endereco,
+    iframe,
+    .pin-horario,
+    .pin-contato,
+    .contato p,
+    .semana {
+        width: 95vw;
+    }
+
+    .semana {
+        padding-block: 14px;
+    }
+
+    nav a {
+        font-size: 15px;
+    }
+
+    .servicos-comodidades h2 {
+        font-size: 20px;
+    }
+
+    .anuncio p {
+        font-size: 14px;
+    }
+
+    .links-nav {
+        gap: 10vw;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    footer {
+        align-items: start;
+    }
+
+    .links a {
+        width: 90vw;
+        justify-content: unset;
+        padding-left: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        height: 25vh;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .servicos-comodidades {
+        flex-direction: column;
+        justify-content: space-between;
+        height: auto;
+    }
+
+    .servicos,
+    .comodidades {
+        width: 100vw;
+        height: unset;
+        margin-top: 1vh;
+    }
+
+    .servicos {
+        text-align: center;
+    }
+
+    .servicos br {
+        display: none;
+    }
+
+    .icons-comodidades {
+        flex-direction: row;
+        width: 75vw;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .servicos-comodidades h2 {
+        padding-block: 1vh;
+    }
+
+    .comodidades h2 {
+        padding-inline: 1vw;
+    }
+
+    .wi-fi,
+    .sala-espera,
+    .espaco-kids,
+    .banheiros {
+        flex-direction: column;
+        gap: 0;
+        display: flex;
+        align-items: center;
+        width: 105px;
+        text-wrap: nowrap;
+    }
+
+    header h2 {
+        padding-inline: 5vw;
+    }
+
+    .nav ul {
+        text-align: right;
+    }
+
+    footer {
+        justify-content: space-around;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+    .nav {
+        margin-bottom: 0;
+        gap: unset;
+    }
+
+    .links {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 275px) {
+
+    .pin-contato p,
+    .servicos {
+        margin-bottom: 5vh;
+    }
+}
